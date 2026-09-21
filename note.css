@@ -1,0 +1,112 @@
+.root,
+html, body {
+    height: 100%;
+}
+
+:root{
+    --bg: #f5f8fb;
+    --card: #ffffff;
+    --accent: #1976a5;
+    --muted: #4b5963;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--muted);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 2rem 1rem;
+}
+
+/* Header */
+.h1-atr{
+    font-size: 70px;
+    color: var(--accent);
+    margin: 0 0 1.25rem 0;
+    transform: translateX(12rem);
+}
+
+/* Main container centers the layout while inputs are left-offset within it */
+main{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+/* Slight left indent for title and textarea so they sit under the centered header but not flush left */
+#note-title,
+#notes{
+    display: block;
+    width: calc(70% - 3rem);
+    margin-left: -15.5rem;
+    margin-right: 0;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 8px;
+    background: var(--card);
+    box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#note-title{
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+#notes{
+    min-height: 220px;
+    resize: vertical;
+}
+
+#save-button{
+    display: block;
+    margin-top: 1rem;
+    padding: 0.65rem 1.25rem;
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transform: translateX(6rem);
+}
+
+#note-list{
+    margin-top: 2rem;
+    list-style: none;
+    padding: 0;
+    transform: translateX(20rem);
+}
+
+#clear-notes-button{
+    display: block;
+    margin-top: 1rem;
+    padding: 0.65rem 1.25rem;
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transform: translateX(5.7rem);
+}
+
+.note{
+    padding: 10px;
+    margin-bottom: 0.5rem;
+    background-color: var(--card);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+    transform: translateY(-22rem) translateX(20rem);
+}
+
+/* Small screens: reduce indent so layout fits nicely */
+@media (max-width: 480px){
+    #note-title, #notes{ width: calc(100% - 2rem); margin-left: 1rem; }
+    .h1-atr{ font-size: 1.25rem; }
+}
